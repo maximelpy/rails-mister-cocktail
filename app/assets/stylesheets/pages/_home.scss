@@ -1,5 +1,9 @@
 // Specific CSS for your home-page
 
+:root {
+  --mainColor: #ff9800;
+}
+
 body{
   background-color: black;
   font-family: monospace;
@@ -38,6 +42,9 @@ a {
 
 }
 
+
+
+
 marquee {
   color: white;
   font-family: monospace;
@@ -56,6 +63,20 @@ marquee {
   height: 50px;
   border: 1px solid white;
   margin: 20px;
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  text-decoration: none;
+  transition: background-size .2s;
+}
+
+.cocktail-card:hover {
+  background-size: 4px 50px;
 }
 
 
