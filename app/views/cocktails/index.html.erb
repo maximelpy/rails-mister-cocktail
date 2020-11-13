@@ -1,8 +1,25 @@
-<h1> All cocktails</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Un wisky d'abord ?</h1>
+    <p class="lead">A marvelous selection of the finest cocktails on Internet</p>
 
-<% @cocktails.each do |cocktail| %>
-<ul><%= link_to cocktail.name, cocktail_path(cocktail) %></ul>
-<% end %>
 
-
-<%= link_to "Create a new Cocktail", new_cocktail_path, class: "btn btn-primary" %>
+      <div id="typed-strings">
+       <p>A marvelous <strong>selection</strong> of the finest cocktails on Internet.</p>
+       <p>Very <em>nice</em> ....................................🥃</p>
+     </div>
+    <span id="typed"></span>
+  </div>
+  <%= link_to "Create a new Cocktail", new_cocktail_path, class: "btn btn-outline-success" %>
+</div>
+<marquee behavior="scroll"  scrollamount="7" direction="left"> <strong>//CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//     //CREATE_YOURS//</strong></marquee>
+<div class="container text-center">
+  <h3><strong>//MENU//</strong></h3>
+  <div class= "container-menu">
+    <% @cocktails.each do |cocktail| %>
+      <div class="cocktail-card">
+        <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+      </div>
+    <% end %>
+  </div>
+</div>
